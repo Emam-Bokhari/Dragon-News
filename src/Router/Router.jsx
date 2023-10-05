@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout/MainLayout";
 import Home from "../pages/Home/Home";
 import About from './../pages/About/About';
 import Career from './../pages/Career/Career';
+import Details from "../components/CenteredDisplayNews/Details/Details";
 
 const Router = createBrowserRouter([
     {
@@ -11,7 +12,7 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader:()=>fetch("./categories.json"),
+                loader: () => fetch("../categories.json"),
                 element: <Home />
             },
             {
@@ -21,6 +22,11 @@ const Router = createBrowserRouter([
             {
                 path: "/career",
                 element: <Career />
+            },
+            {
+                path: "/details/:_id",
+                loader:()=>fetch("./news.json"),
+                element: <Details />
             }
         ]
     }

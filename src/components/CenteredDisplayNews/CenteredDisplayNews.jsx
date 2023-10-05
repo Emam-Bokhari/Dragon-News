@@ -9,7 +9,7 @@ const CenteredDisplayNews = ({ newsData }) => {
             <h2 className="text-[#403F3F] font-semibold md:text-lg lg::text-xl" >Dragon News Home</h2>
 
             <div>
-                {newsData?.map((item) => <DisplayNews key={item.id} data={item} />)}
+                {newsData?.map((item,index) => <DisplayNews key={index} data={item} />)}
             </div>
 
 
@@ -18,7 +18,7 @@ const CenteredDisplayNews = ({ newsData }) => {
 };
 
     CenteredDisplayNews.propTypes={
-        newsData:PropTypes.array.isRequired
+        newsData:PropTypes.array
     }
 
 export default CenteredDisplayNews;
