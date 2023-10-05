@@ -9,6 +9,7 @@ const LeftSideNavigation = ({ newsCategories }) => {
 
             <div>
                 <h2 className="text-[#403F3F] font-semibold md:text-lg lg::text-xl" >All Caterogy</h2>
+                
                 <p className="bg-[#E7E7E7] py-2 rounded-md text-center text-[#403F3F] font-semibold md:text-lg lg:text-xl my-5">National News</p>
 
                 {/* News Categories */}
