@@ -1,6 +1,10 @@
-import Header from "../../SharedComponents/Header";
+import Header from "../../SharedComponents/Header/Header";
 import Navbar from "../../SharedComponents/Navbar/Navbar";
-import Marquee from "react-fast-marquee";
+import Latest from "../../components/Latest";
+import LeftSideNavigation from './../../components/LeftSideNavigation/LeftSideNavigation';
+import CenteredDisplayNews from './../../components/CenteredDisplayNews/CenteredDisplayNews';
+import RightSideNavigation from './../../components/RightSideNavigation/RightSideNavigation';
+
 
 const Home = () => {
     return (
@@ -12,16 +16,18 @@ const Home = () => {
             </div>
 
             {/* Latest News */}
-            <div className="flex my-5 " >
-                <span className="bg-[#D72050] text-base font-medium px-4 py-1 text-white" >Latest</span>
-                <Marquee>
-                    <h2 className="text-lg font-semibold text-[#403F3F]" >Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...</h2>
-                </Marquee>
-            </div>
+            <Latest/>
 
             {/* Start Navbar */}
             <div>
                 <Navbar />
+            </div>
+
+            {/* Right,Left Side Navigation & Center Display News */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 my-10" >
+                <LeftSideNavigation/>
+                <CenteredDisplayNews/>
+                <RightSideNavigation/>
             </div>
 
         </div>
