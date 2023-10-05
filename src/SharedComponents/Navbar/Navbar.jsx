@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa"
 
 const Navbar = () => {
     return (
-        <div className="flex justify-between items-center" >
+        <div className="flex justify-between items-center my-5" >
 
             {/* Left side: Empty div for spacing */}
             <div></div>
