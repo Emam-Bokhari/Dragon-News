@@ -5,6 +5,7 @@ import About from './../pages/About/About';
 import Career from './../pages/Career/Career';
 import Details from "../components/CenteredDisplayNews/Details/Details";
 import Signin from "../pages/Signin/Signin";
+import Register from "../pages/Register/Register";
 
 const Router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const Router = createBrowserRouter([
             {
                 path: "/signin",
                 element: <Signin />
+            },
+            {
+                path: "/register",
+                element: <Register />
             }
         ]
     }
