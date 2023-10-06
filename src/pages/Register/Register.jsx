@@ -42,7 +42,7 @@ const Register = () => {
         <div>
             <Navbar />
 
-            <div className="flex justify-center items-center h-[100vh]" >
+            <div className="flex justify-center items-center h-[80vh]" >
 
                 <div className="w-[350px] h-[550px]  shadow-md" >
                     <h2 className="text-[#403F3F] text-xl font-semibold text-center mt-5" >Register your account</h2>
