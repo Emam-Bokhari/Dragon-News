@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import About from './../pages/About/About';
 import Career from './../pages/Career/Career';
 import Details from "../components/CenteredDisplayNews/Details/Details";
+import Signin from "../pages/Signin/Signin";
 
 const Router = createBrowserRouter([
     {
@@ -25,8 +26,12 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/details/:_id",
-                loader:()=>fetch("./news.json"),
+                loader: () => fetch("./news.json"),
                 element: <Details />
+            },
+            {
+                path: "/signin",
+                element: <Signin />
             }
         ]
     }

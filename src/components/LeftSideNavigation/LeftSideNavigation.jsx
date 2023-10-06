@@ -5,7 +5,7 @@ const LeftSideNavigation = ({ newsCategories }) => {
 
 
     return (
-        <div className="border-2 border-red-500 md:col-span-1" >
+        <div className="md:col-span-1" >
 
             <div>
                 <h2 className="text-[#403F3F] font-semibold md:text-lg lg::text-xl" >All Caterogy</h2>

@@ -5,7 +5,7 @@ const MainLayout = () => {
         <div>
 
             {/* Section */}
-            <section className="max-w-screen-xl mx-auto px-8 md:px-16 border-2 border-red-500" >
+            <section className="max-w-screen-xl mx-auto px-8 md:px-16" >
 
                 {/* Start Outlet */}
                 <div className="my-10" >
