@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast'
 import { useContext } from "react";
 import Navbar from "../../SharedComponents/Navbar/Navbar";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -16,11 +17,12 @@ const Register = () => {
 
         // signup with email and password
         createUser(email,password)
-        .then(result=>{
-            console.log(result.user)
+        .then(()=>{
+           
+            return toast.success('Registered Successfully!')
         })
         .catch(error=>{
-            console.log(error)
+           return toast.error(error.message)
         })
     }
     return (

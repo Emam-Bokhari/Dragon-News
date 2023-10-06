@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
@@ -10,6 +11,7 @@ const MainLayout = () => {
                 {/* Start Outlet */}
                 <div className="my-10" >
                     <Outlet />
+                    <Toaster/>
                 </div>
 
             </section>
