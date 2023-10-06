@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import Navbar from './../../SharedComponents/Navbar/Navbar';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const Signin = () => {
 
@@ -15,11 +16,11 @@ const Signin = () => {
 
         // signin with email and password
         signin(email,password)
-        .then(result=>{
-            console.log(result.user)
+        .then(()=>{
+            toast.success('Signin Successfully!')
         })
         .catch(error=>{
-            console.log(error.message);
+            toast.error(error.message);
         })
 
     }
@@ -40,11 +41,11 @@ const Signin = () => {
                     <form onSubmit={handleLogin} className="px-4 space-y-2" >
                         {/* email */}
                         <p className='text-[#403F3F] text-base font-semibold'>Email Address</p>
-                        <input type="email" name="email" placeholder="Enter your email address" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" />
+                        <input type="email" name="email" placeholder="Enter your email address" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" required/>
 
                         {/* password */}
                         <p className='text-[#403F3F] text-base font-semibold' >Password</p>
-                        <input type="password" name="password" placeholder="Enter your password" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" />
+                        <input type="password" name="password" placeholder="Enter your password" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" required/>
 
                         {/* login button */}
                            <div className="pt-2" >

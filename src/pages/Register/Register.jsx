@@ -15,15 +15,28 @@ const Register = () => {
         const password = event.target.password.value
         const terms = event.target.terms.checked
 
-        // signup with email and password
+
+
+        if(!terms){
+            return toast.error('Please checked terms and condition')
+        }
+        // password must be 6 characters or long
+        if(password.length>=6){
+            // signup with email and password
         createUser(email,password)
         .then(()=>{
-           
             return toast.success('Registered Successfully!')
         })
         .catch(error=>{
            return toast.error(error.message)
         })
+        }
+
+        else{
+            return toast.error('Password must be 6 characters or long')
+        }
+
+        
     }
     return (
         <div>
@@ -42,7 +55,7 @@ const Register = () => {
 
                         {/* name */}
                         <p className='text-[#403F3F] text-base font-semibold'>Your Name</p>
-                        <input type="text" name="name" placeholder="Enter your name" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" />
+                        <input type="text" name="name" placeholder="Enter your name" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" required />
 
 
                         {/* pthto url */}
@@ -52,12 +65,12 @@ const Register = () => {
 
                         {/* email */}
                         <p className='text-[#403F3F] text-base font-semibold'>Email Address</p>
-                        <input type="email" name="email" placeholder="Enter your email address" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" />
+                        <input type="email" name="email" placeholder="Enter your email address" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" required/>
 
 
                         {/* password */}
                         <p className='text-[#403F3F] text-base font-semibold' >Password</p>
-                        <input type="password" name="password" placeholder="Enter your password" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" />
+                        <input type="password" name="password" placeholder="Enter your password" className="bg-[#F3F3F3] w-full py-2 px-2 rounded-sm placeholder:text-sm placeholder:text-[#9F9F9F]" required/>
 
                         {/* terms and condition */}
                         <div className="py-2" >
